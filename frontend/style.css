@@ -1,0 +1,220 @@
+/* ======= GLOBAL STYLES ======= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* ======= FORM STYLES ======= */
+form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form select {
+  background-color: #fff;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* ======= CONTROLS (search, filter, sort) ======= */
+.controls {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1 1 200px;
+  background-color: #fff;
+}
+
+/* ======= JOB LISTING GRID ======= */
+#job-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column grid on desktop */
+  gap: 20px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  list-style: none;
+}
+
+/* Each Job Item */
+.job-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Header */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.job-header .company {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Job Details */
+.job-details {
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #555;
+}
+
+.job-type {
+  background-color: #e1ecf4;
+  color: #0366d6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Tags */
+.job-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #ddd;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 12px;
+}
+
+/* Job Actions */
+.job-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-button i {
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delete-btn i {
+  font-size: 14px;
+}
+
+/* No Jobs Message */
+.no-jobs {
+  padding: 20px;
+  background-color: #fff3cd;
+  border-left: 4px solid #ffeeba;
+  color: #856404;
+  border-radius: 4px;
+}
+
+/* ======= RESPONSIVE STYLES ======= */
+
+/* For tablets and smaller screens: single column grid */
+@media (max-width: 768px) {
+  #job-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile enhancements */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form button {
+    margin-top: 10px;
+  }
+
+  .job-header,
+  .job-details,
+  .job-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

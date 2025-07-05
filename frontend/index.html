@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Job Board</h1>
+
+  <form id="job-form">
+    <input type="text" id="title" placeholder="Job Title" required>
+    <input type="text" id="company" placeholder="Company Name" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <select id="job_type" required>
+      <option value="">Select Job Type</option>
+      <option value="Remote">Remote</option>
+      <option value="On-site">On-site</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+    <input type="text" id="tags" placeholder="Tags (comma-separated)">
+    <button type="submit">Add Job</button>
+  </form>
+
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search by title or company">
+    <select id="sort-select">
+      <option value="newest">Sort by: Newest</option>
+      <option value="oldest">Sort by: Oldest</option>
+    </select>
+    <select id="filter-type">
+      <option value="">All Types</option>
+      <option value="On-site">On-site</option>
+      <option value="Remote">Remote</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+  </div>
+
+  <hr>
+
+  <h2>Job Listings</h2>
+  <ul id="job-list"></ul>
+
+  <script src="/script.js"></script>
+</body>
+</html>
